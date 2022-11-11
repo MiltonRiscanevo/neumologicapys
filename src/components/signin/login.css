@@ -1,0 +1,86 @@
+.sign_In{
+    margin-top: 25px;
+    width: 25%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #34a0a4;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 20px 40px;
+}
+
+.sign_In h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 50%;
+    background: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    margin: 10px;
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+.inputs{
+    position: relative;
+    
+}
+.inputs .underline{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #0fa5a2;
+    transform: scaleX(0);
+    transition: 0.35s;
+}
+
+.inputs> label{
+    position: absolute;
+    pointer-events: none;
+    translate: 0 -50%;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.35s;
+    top: 50%;
+    left: 34px;
+    white-space: nowrap;
+}
+
+.inputs input{
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid #2e2a33;
+    margin: 20px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.96);
+
+}
+
+.inputs>
+:is(input:focus, input.has-value)~ label{
+    translate: -42px -44px;
+    scale: 0.875;
+    color: #a1d1b2;
+}
+
+.inputs>
+:is(input:focus, input.has-value)~ .underline{
+    transform: scaleX(1);
+}
